@@ -10,4 +10,4 @@ use:
 
 1. pip install pytest-tmreport (download)
 2. pytest pytest-tmreport-name test.html (generate report)
-3. open test.html
+3. open test.html   

@@ -3,7 +3,7 @@ import os
 import copy
 import datetime
 import string
-import random
+import time
 
 base_dir = os.path.dirname(__file__)
 
@@ -40,7 +40,7 @@ def pytest_runtest_makereport(item, call):
     out = yield
     report = out.get_result()
     if report.when == "call":
-        cases.append({'id': random.randint(0, 9999999), 'title': item.nodeid})
+        cases.append({'id': int(time.time()), 'title': item.nodeid})
         longrepr = str(report.longrepr) if report.longrepr else ""
         logs = longrepr + "\n".join(["\n".join(section) for section in report.sections])  # 用例执行日志
         logs = "\n | INFO |".join(logs.split("| INFO |"))  # 换行处理
