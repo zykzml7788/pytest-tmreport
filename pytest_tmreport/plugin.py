@@ -41,6 +41,7 @@ def pytest_runtest_makereport(item, call):
     report = out.get_result()
     if report.when == "call":
         cases.append({'id': int(time.time()), 'title': item.nodeid})
+        time.sleep(0.01)
         longrepr = str(report.longrepr) if report.longrepr else ""
         logs = longrepr + "\n".join(["\n".join(section) for section in report.sections])  # 用例执行日志
         logs = "\n | INFO |".join(logs.split("| INFO |"))  # 换行处理
