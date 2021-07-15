@@ -58,6 +58,10 @@ class TestApi():
         logger.info("关注迅捷小侯")
 
     def test_2(self):
+        logger.info("关注迅捷小侯")
+        logger.info("关注迅捷小侯")
+        logger.info("关注迅捷小侯")
+        logger.info("关注迅捷小侯")
         assert 1 == 2
 
 

@@ -43,7 +43,7 @@ def pytest_runtest_makereport(item, call):
         cases.append({'id': time.time(), 'title': item.nodeid})
         time.sleep(0.01)
         longrepr = str(report.longrepr) if report.longrepr else ""
-        logs = longrepr + "\n".join(["\n".join(section) for section in report.sections])  # 用例执行日志
+        logs = "\n".join(["\n".join(section) for section in report.sections]) + "\n" + longrepr  # 用例执行日志
         logs = "\n | INFO |".join(logs.split("| INFO |"))  # 换行处理
         result = 1 if report.outcome == 'passed' else 0  # 是否通过
         duration = report.duration  # 执行时间
