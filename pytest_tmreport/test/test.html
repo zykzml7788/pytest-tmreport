@@ -18,7 +18,7 @@
         <h2 class="el-icon-document-copy">自动化测试报告</h2>
       </el-header>
       <el-container>
-        <el-aside width="600px" style="margin-top: 20px">
+        <el-aside width="500px" style="margin-top: 20px">
           <el-card shadow="hover" style=";margin-bottom: 20px">
             <h3>执行成功率</h3>
             <div id="main" style="width: 500px;height:430px"></div>
@@ -49,7 +49,7 @@
                   <span style="font-size: small ">失败率 {{(summary.fail_rate * 100).toFixed(2)}}% </span>
                 </el-card>
              </el-col>
-             <el-col :span="7">
+             <el-col :span="8">
                 <el-card shadow="hover">
                   <span style="font-size: small ">持续执行</span>
                    <el-tag type="warning" label="执行结果" effect="dark" style="float: right" size="small">持续</el-tag>
