@@ -101,8 +101,8 @@ def setup_fixture(request):
             "avg_duration": avg_duration,
         }
         series_data = [
-            {"value": success, "name": 'Success'},
-            {"value": failed, "name": 'Failed'}
+            {"value": success, "name": 'Success', 'itemStyle': {'color': '#97cc64'}},
+            {"value": failed, "name": 'Failed', 'itemStyle': {'color': '#fd5a3e'}}
         ]
 
         report_path = request.config.getoption("--pytest-tmreport-path", default='.')
